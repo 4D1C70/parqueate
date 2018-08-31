@@ -1,0 +1,801 @@
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:33:54 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 2199ms (Views: 1742.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:37:06 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 298ms (Views: 234.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:47:58 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 360ms
+
+
+  
+ActionView::Template::Error (Missing partial layouts/partials/_menu with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Usuario/Documents/Parkeate_RoR/app/views"
+):
+    21:   </head>
+    22: 
+    23:   <body>
+    24:   	<%= render partial: 'layouts/partials/menu' %>
+    25:     <%= yield %>
+    26:   </body>
+    27: </html>
+  
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__328806272_101687760'
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:52:32 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (56.0ms)
+Completed 500 Internal Server Error in 369ms
+
+
+  
+ActionView::Template::Error (The asset "template/logo1.png" is not present in the asset pipeline.):
+    25:           <span class="icon-bar"></span>
+    26:           <span class="icon-bar"></span>
+    27:         </button>
+    28:         <a class="navbar-brand logo" href="/"><%= image_tag "template/logo1.png", html: { alt: "rest_slider1" } %></a>
+    29:       </div>
+    30:     </div>
+    31:     <div class="collapse navbar-collapse" id="upmenu">
+  
+app/views/layouts/partials/_menu.html.erb:28:in `_app_views_layouts_partials__menu_html_erb__668288970_104260220'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__328806272_106636440'
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:56:01 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (305.8ms)
+Completed 500 Internal Server Error in 612ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `parking_rent_path' for #<#<Class:0x0000000006e08250>:0x000000000ade5918>
+Did you mean?  parking_edit_path
+               parking_register_path
+               parking_render_path
+               parking_list_path
+               parking_search_path):
+    35:           <ul class="dropdown-menu">
+    36:             <li class="dropdown-header">Parking</li>
+    37:             <li><%= link_to 'Listar', parking_list_path %></li>
+    38:             <li><%= link_to 'Alquilar', parking_rent_path %></li>
+    39:             <li><%= link_to 'Servicios Adicionales', additional_services_path %></li>
+    40:             <% if false %>
+    41:               <li><%= link_to 'Buscar', parking_search_path %></li>
+  
+app/views/layouts/partials/_menu.html.erb:38:in `_app_views_layouts_partials__menu_html_erb__668288970_83583880'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__328806272_90998500'
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:57:42 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (331.8ms)
+Completed 500 Internal Server Error in 656ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `additional_services_path' for #<#<Class:0x0000000006e08250>:0x0000000006fccd20>):
+    36:             <li class="dropdown-header">Parking</li>
+    37:             <li><%= link_to 'Listar', parking_list_path %></li>
+    38:             <li><%= link_to 'Alquilar', parking_render_path %></li>
+    39:             <li><%= link_to 'Servicios Adicionales', additional_services_path %></li>
+    40:             <% if false %>
+    41:               <li><%= link_to 'Buscar', parking_search_path %></li>
+    42:             <% end %>
+  
+app/views/layouts/partials/_menu.html.erb:39:in `_app_views_layouts_partials__menu_html_erb__668288970_94782960'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__328806272_59213260'
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:58:14 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (344.8ms)
+Completed 500 Internal Server Error in 661ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `additional_services_path' for #<#<Class:0x0000000006e08250>:0x000000000a65d100>):
+    36:             <li class="dropdown-header">Parking</li>
+    37:             <li><%= link_to 'Listar', parking_list_path %></li>
+    38:             <li><%= link_to 'Alquilar', parking_render_path %></li>
+    39:             <li><%= link_to 'Servicios Adicionales', additional_services_path %></li>
+    40:             <% if false %>
+    41:               <li><%= link_to 'Buscar', parking_search_path %></li>
+    42:             <% end %>
+  
+app/views/layouts/partials/_menu.html.erb:39:in `_app_views_layouts_partials__menu_html_erb__668288970_81048740'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__328806272_86997760'
+Started GET "/" for 127.0.0.1 at 2018-08-30 21:59:13 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (280.8ms)
+Completed 500 Internal Server Error in 589ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x0000000006e08250>:0x000000000bbacfb0>):
+    41:             <% end %>
+    42:           </ul>
+    43:         </li>
+    44:         <li><%= link_to 'Acerca de', about_path %></li>
+    45:         <li><%= link_to 'Nuestros servicios', services_path %></li>
+    46:         <li><%= link_to 'Contacto', contact_path %></li>
+    47:         <%= link_to 'Anuncia aquí', parking_register_path %>
+  
+app/views/layouts/partials/_menu.html.erb:44:in `_app_views_layouts_partials__menu_html_erb__668288970_90428740'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__328806272_98380840'
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:02:51 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 315ms (Views: 268.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:05:23 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (2.0ms)
+Completed 200 OK in 327ms (Views: 280.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:06:17 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 323ms (Views: 277.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:06:47 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (2.0ms)
+Completed 200 OK in 333ms (Views: 271.7ms)
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:08:24 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 53ms
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:08:24 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 47ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:08:31 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 324ms (Views: 274.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:11:38 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (2.0ms)
+Completed 200 OK in 378ms (Views: 323.3ms)
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:11:56 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 31ms
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:11:56 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 48ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:12:00 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 329ms (Views: 282.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:12:14 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 301ms (Views: 252.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-08-30 22:12:23 -0500
+Processing by StaticController#about as HTML
+  Parameters: {"alias"=>"about"}
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 289ms (Views: 245.5ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-08-30 22:12:25 -0500
+Processing by StaticController#services as HTML
+  Parameters: {"alias"=>"services"}
+  Rendering static/services.html.erb within layouts/application
+  Rendered static/services.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 312ms (Views: 248.6ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:12:26 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 302ms (Views: 253.8ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-08-30 22:12:29 -0500
+Processing by StaticController#about as HTML
+  Parameters: {"alias"=>"about"}
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 292ms (Views: 250.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-08-30 22:12:55 -0500
+Processing by StaticController#about as HTML
+  Parameters: {"alias"=>"about"}
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (2.0ms)
+Completed 200 OK in 358ms (Views: 306.9ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-08-30 22:16:27 -0500
+Processing by StaticController#about as HTML
+  Parameters: {"alias"=>"about"}
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 301ms (Views: 253.5ms)
+
+
+Started GET "/parking/list" for 127.0.0.1 at 2018-08-30 22:16:32 -0500
+Processing by ParkingController#list as HTML
+Completed 200 OK in 50ms
+
+
+Started GET "/parking/list" for 127.0.0.1 at 2018-08-30 22:16:32 -0500
+Processing by ParkingController#list as HTML
+Completed 200 OK in 59ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:16:40 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 300ms (Views: 252.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:16:54 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 352ms (Views: 299.5ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-08-30 22:17:02 -0500
+Processing by StaticController#about as HTML
+  Parameters: {"alias"=>"about"}
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 285ms (Views: 246.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-08-30 22:17:03 -0500
+Processing by StaticController#services as HTML
+  Parameters: {"alias"=>"services"}
+  Rendering static/services.html.erb within layouts/application
+  Rendered static/services.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 281ms (Views: 244.9ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:17:04 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 312ms (Views: 264.7ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-08-30 22:17:07 -0500
+Processing by StaticController#services as HTML
+  Parameters: {"alias"=>"services"}
+  Rendering static/services.html.erb within layouts/application
+  Rendered static/services.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 284ms (Views: 245.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-08-30 22:17:08 -0500
+Processing by StaticController#about as HTML
+  Parameters: {"alias"=>"about"}
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 297ms (Views: 242.2ms)
+
+
+Started GET "/parking/list" for 127.0.0.1 at 2018-08-30 22:19:05 -0500
+Processing by ParkingController#list as HTML
+Completed 200 OK in 47ms
+
+
+Started GET "/parking/list" for 127.0.0.1 at 2018-08-30 22:19:05 -0500
+Processing by ParkingController#list as HTML
+Completed 200 OK in 50ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:19:11 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (3.0ms)
+Completed 200 OK in 355ms (Views: 290.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:23:48 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 339ms (Views: 287.8ms)
+
+
+Started GET "/parking/list" for 127.0.0.1 at 2018-08-30 22:23:51 -0500
+Processing by ParkingController#list as HTML
+Completed 200 OK in 32ms
+
+
+Started GET "/parking/list" for 127.0.0.1 at 2018-08-30 22:23:51 -0500
+Processing by ParkingController#list as HTML
+Completed 200 OK in 47ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:24:00 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 311ms (Views: 264.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:26:12 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 309ms (Views: 261.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:26:32 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 322ms (Views: 273.0ms)
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:26:39 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 47ms
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:26:39 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 48ms
+
+
+Started GET "/parking/" for 127.0.0.1 at 2018-08-30 22:26:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/parking"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:27:04 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (2.0ms)
+Completed 200 OK in 302ms (Views: 256.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-08-30 22:27:14 -0500
+Processing by StaticController#about as HTML
+  Parameters: {"alias"=>"about"}
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 289ms (Views: 252.0ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-08-30 22:27:15 -0500
+Processing by StaticController#services as HTML
+  Parameters: {"alias"=>"services"}
+  Rendering static/services.html.erb within layouts/application
+  Rendered static/services.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 315ms (Views: 261.7ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:27:16 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 306ms (Views: 259.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:27:32 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 349ms (Views: 298.2ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:27:34 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 302ms (Views: 254.4ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:28:07 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 299ms (Views: 252.3ms)
+
+
+Started GET "/parking/list" for 127.0.0.1 at 2018-08-30 22:28:10 -0500
+Processing by ParkingController#list as HTML
+Completed 200 OK in 38ms
+
+
+Started GET "/parking/list" for 127.0.0.1 at 2018-08-30 22:28:10 -0500
+Processing by ParkingController#list as HTML
+Completed 200 OK in 47ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:28:13 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 347ms (Views: 293.5ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2018-08-30 22:28:38 -0500
+Processing by StaticController#services as HTML
+  Parameters: {"alias"=>"services"}
+  Rendering static/services.html.erb within layouts/application
+  Rendered static/services.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (2.0ms)
+Completed 200 OK in 397ms (Views: 317.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-08-30 22:28:39 -0500
+Processing by StaticController#about as HTML
+  Parameters: {"alias"=>"about"}
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 293ms (Views: 241.6ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:28:41 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 291ms (Views: 245.8ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:31:39 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (56.0ms)
+Completed 500 Internal Server Error in 421ms
+
+
+  
+ActionView::Template::Error (The asset "template/collectionlogo1.png" is not present in the asset pipeline.):
+    1: <div class="bottommenu">
+    2: 	<div class="bottomlogo">
+    3: 	<%= image_tag "template/collectionlogo1.png", html: { alt: "rest_slider1" } %>
+    4: 	</div>
+    5: 	<ul class="nav nav-tabs bottomlinks">
+    6: 		<li role="presentation" ><a href="#/" role="button">ABOUT US</a></li>
+  
+app/views/layouts/partials/_footer.html.erb:3:in `_app_views_layouts_partials__footer_html_erb__279684793_94067140'
+app/views/layouts/application.html.erb:28:in `_app_views_layouts_application_html_erb__328806272_100457400'
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:34:49 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (145.9ms)
+Completed 500 Internal Server Error in 558ms
+
+
+  
+ActionView::Template::Error (The asset "template/line.png" is not present in the asset pipeline.):
+    11: 	</ul>
+    12: 	<p>"Lorem ipsum dolor sit amet, consectetur,  sed do eiusmod tempor incididunt <br>
+    13: 		eiusmod tempor incididunt"</p>
+    14: 	 <%= image_tag "template/line.png", html: { alt: "rest_slider1" } %>
+    15: 	 <br>
+    16: 	 <div class="bottomsocial">
+    17: 		<a href="#"><i class="fa fa-facebook"></i></a>
+  
+app/views/layouts/partials/_footer.html.erb:14:in `_app_views_layouts_partials__footer_html_erb__279684793_101192920'
+app/views/layouts/application.html.erb:28:in `_app_views_layouts_application_html_erb__328806272_103545100'
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:36:09 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (58.0ms)
+Completed 500 Internal Server Error in 481ms
+
+
+  
+ActionView::Template::Error (The asset "template/line.png" is not present in the asset pipeline.):
+    11: 	</ul>
+    12: 	<p>"Lorem ipsum dolor sit amet, consectetur,  sed do eiusmod tempor incididunt <br>
+    13: 		eiusmod tempor incididunt"</p>
+    14: 	 <%= image_tag "template/line.png", html: { alt: "rest_slider1" } %>
+    15: 	 <br>
+    16: 	 <div class="bottomsocial">
+    17: 		<a href="#"><i class="fa fa-facebook"></i></a>
+  
+app/views/layouts/partials/_footer.html.erb:14:in `_app_views_layouts_partials__footer_html_erb__279684793_102603740'
+app/views/layouts/application.html.erb:28:in `_app_views_layouts_application_html_erb__328806272_105426460'
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:36:35 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (91.6ms)
+Completed 200 OK in 467ms (Views: 411.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:40:31 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (6.0ms)
+Completed 200 OK in 367ms (Views: 315.5ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-08-30 22:42:08 -0500
+Processing by StaticController#contact as HTML
+  Parameters: {"alias"=>"contact"}
+  Rendering static/contact.html.erb within layouts/application
+  Rendered static/contact.html.erb within layouts/application (3.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (8.0ms)
+Completed 200 OK in 7193ms (Views: 6690.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:42:23 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (7.0ms)
+Completed 200 OK in 428ms (Views: 359.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:46:06 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (8.0ms)
+Completed 200 OK in 406ms (Views: 359.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:47:24 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (6.0ms)
+Completed 200 OK in 377ms (Views: 326.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:47:25 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+  Rendered layouts/partials/_footer.html.erb (0.0ms)
+Completed 200 OK in 359ms (Views: 310.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:47:27 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+  Rendered layouts/partials/_footer.html.erb (5.0ms)
+Completed 200 OK in 353ms (Views: 301.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:47:28 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+  Rendered layouts/partials/_footer.html.erb (15.6ms)
+Completed 200 OK in 410ms (Views: 354.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:47:29 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+  Rendered layouts/partials/_footer.html.erb (15.6ms)
+Completed 200 OK in 400ms (Views: 351.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:48:00 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+  Rendered layouts/partials/_footer.html.erb (5.0ms)
+Completed 200 OK in 362ms (Views: 315.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:51:13 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 335ms (Views: 282.3ms)
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:51:19 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 47ms
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:51:19 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 46ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:51:24 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 317ms (Views: 269.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:52:36 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 310ms (Views: 263.4ms)
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:52:46 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 31ms
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:52:46 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 48ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:52:50 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 318ms (Views: 271.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:54:15 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (1.0ms)
+Completed 200 OK in 305ms (Views: 257.9ms)
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:54:18 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 47ms
+
+
+Started GET "/parking/register" for 127.0.0.1 at 2018-08-30 22:54:18 -0500
+Processing by ParkingController#register as HTML
+Completed 200 OK in 48ms
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 22:54:28 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/partials/_menu.html.erb (0.0ms)
+Completed 200 OK in 344ms (Views: 287.1ms)
+
+
