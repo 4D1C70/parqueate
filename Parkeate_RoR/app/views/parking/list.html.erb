@@ -1,0 +1,58 @@
+<%= form_for :alquiler, :html => { :class => "form-horizontal" } do |f| %>
+<div class="py-5 text-center">
+      <h1>Alquileres Solicitados</h1>
+   </div>
+<div class="container">
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :fecha_inicio %>
+		</div>
+		<div class="col-sm-3">
+			<%= f.date_field :fecha_inicio, { :class => "form-control"} %>
+		</div>
+	
+		<div class="col-sm-offset-1 col-sm-2">
+			<%= f.label :fecha_fin %>
+		</div>
+		<div class="col-sm-3">
+			<%= f.date_field :fecha_fin, { :class => "form-control"} %>
+		</div>		
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :estacionamientos %>
+		</div>
+		<div class="col-sm-6">
+			<%= f.select :estacionamientos, [["Estacionamiento 1",1],["Estacionamiento 2",2],["Estacionamiento 3",3]], { :include_blank => "Seleccione"}, { :class => "form-control"} %>
+		</div>
+	</div>
+
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Estacionamiento</th>
+					<th>Direccion</th>
+					<th>Fecha</th>
+					<th>Hora</th>
+					<th>Monto total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Miraflores</td>
+					<td>Av. Larco 1204</td>
+					<td>03/10/2016</td>
+					<td>14:30</td>
+					<td>88.7</td>
+				</tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<% end %>

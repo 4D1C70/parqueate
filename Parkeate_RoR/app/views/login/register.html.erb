@@ -1,0 +1,159 @@
+<%= form_for :usuario, :html => { :class => "form-horizontal" } do |f| %>
+ <div class="py-5 text-center">
+      <h1>Regístrate</h1>
+   </div>
+<div class="container">	
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :nombres %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.text_field :nombres, { :class => "form-control" } %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :apellido_Paterno %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.text_field :apellido_Paterno, { :class => "form-control" } %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :apellido_Materno %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.text_field :apellido_Materno, { :class => "form-control" } %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :sexo %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.label :sexo, { :class => "radio-inline" } do %>
+				<%= f.radio_button :sexo, "ValorSeleccionado" %>
+				Masculino
+			<% end %>
+			<%= f.label :sexo, { :class => "radio-inline"} do %>
+				<%= f.radio_button :sexo, "ValorSeleccionado" %>
+				Femenino
+			<% end %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :documento_Identidad %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.select :documento_Identidad, [["DNI", 1],["Pasaporte", 2]], { :include_blank => "Seleccione" }, { :class => "form-control"} %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :nro_Documento_Identidad %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.text_field :nro_Documento_Identidad, { :class => "form-control" } %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :direccion %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.text_field :direccion, { :class => "form-control" } %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :distrito %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.select :distrito, [["Ate",1],["Barranco",2],["Breña",3],["Chorrillos",4],["Jesus María",5],["La Molina",6],["Magdalena del Mar",7],["Pueblo Libre",8],["San Miguel",9],["Surquillo",10]], { :include_blank => "Seleccione"}, { :class => "form-control"} %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :fecha_nacimiento %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.date_field :fecha_nacimiento, { :class => "form-control"} %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :celular %>			
+		</div>
+		<div class="col-sm-9">
+			<%= f.text_field :celular, { :class => "form-control"} %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :correo %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.email_field :correo, { :class => "form-control"} %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :confirmar_correo %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.email_field :confirmar_correo, { :class => "form-control"} %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :contraseña %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.password_field :contraseña, { :class => "form-control"} %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-3">
+			<%= f.label :confirmar_contraseña %>
+		</div>
+		<div class="col-sm-9">
+			<%= f.password_field :confirmar_contraseña, { :class => "form-control"} %>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-offset-3 col-sm-9">
+			<!-- <%= f.label :activo, { :class => "radio-inline" } do %>
+				<%= f.radio_button :activo, "ValorSeleccionado" %>
+				Sí, me doy de baja
+			<% end %>
+			<%= f.label :activo, { :class => "radio-inline"} do %>
+				<%= f.radio_button :activo, "ValorSeleccionado" %>
+				No, sigo activo
+			<% end %> -->
+			<%= f.label :activo, { :class => "checkbox-inline"} do %>
+				<%= f.check_box :activo, {}, "ValorSeleccionado", nil %>
+				Dar de baja
+			<% end %>
+		</div>
+	</div>
+
+	<%= f.submit "Guardar", :class => "btn btn-primary" %>
+	<%= f.submit "Cancelar", :class => "btn btn-primary" %>
+</div>
+<% end %>

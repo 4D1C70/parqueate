@@ -1,0 +1,67 @@
+<%= form_for :editPublicidad, :html => { :class => "form-horizontal" } do |f| %>
+   <div class="py-5 text-center">
+      <h1>Editar Publicidad</h1>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="panel panel-primary">
+            <div class="panel-heading">Datos de la Publicidad</div>
+            <div class="panel-body">
+               <div class="col-md-12">
+                  <div class="form-group">
+                     <div class="col-md-2">
+                        <label class="control-label" for="titulo">Título</label>
+                     </div>
+                     <div class="col-md-10">
+                        <%= text_field_tag(:title, "",{:class => "form-control"}) %>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <div class="col-md-2">
+                        <label class="control-label" for="titulo">Contenido</label>
+                     </div>
+                     <div class="col-md-10">                		
+                        <%= text_area_tag(:content, "",{:class => "form-control"}) %>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <div class="col-md-2">
+                        <label class="control-label" for="fecha-inicio">Fecha de Inicio</label>
+                     </div>
+                     <div class="col-md-4">
+                        <%= date_field_tag(:start_date, nil, {:class => "form-control"}) %>
+                     </div>
+                     <div class="col-md-2">
+                        <label class="control-label" for="fecha-fin">Fecha de Fin</label>
+                     </div>
+                     <div class="col-md-4">
+                        <%= date_field_tag(:end_date, nil, {:class => "form-control"}) %>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                  	<div class="col-md-2">
+                        <label class="control-label"for="ubicacion">Tarifa</label>
+                     </div>
+                     <div class="col-md-4">
+                        <%= text_field_tag(:title, "",{:class => "form-control"}) %>
+                     </div>
+                     <div class="col-md-2">
+                        <label class="control-label"for="ubicacion">Ubicación</label>
+                     </div>
+                     <div class="col-md-4">	                	
+                        <%= f.select :ubicacion, [["Principal",1],["Páginas Dueño",2],["Páginas Cliente",3]], { :include_blank => "Todas"}, { :class => "form-control"} %>
+                     </div>
+                   </div>
+                   <div class="form-group"> 
+                     <div class="col-md-12" style="text-align: center;" >
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-light">Cancelar</button>
+                     </div>                   	
+                   </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+<% end %>

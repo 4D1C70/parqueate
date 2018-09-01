@@ -1,0 +1,144 @@
+<% if flash[:notice] %>  
+<p class="notice"><% flash[:notice] %></p>  
+<% end %>  
+<%= form_for :cmtEstacionamiento, :html => { :class => "form-horizontal" } do |f| %>
+   <div class="py-5 text-center">
+      <h1>Calificar Estacionamiento</h1>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="panel panel-primary">
+            <div class="panel-heading">Datos del Estacionamiento</div>
+            <div class="panel-body">
+              <div class="col-md-12">
+                <div class="form-group">
+                	<div class="col-md-2">
+	                   <label class="control-label" for="title">Título</label>
+                	</div>
+                	<div class="col-md-10">                		
+	                   <%= text_field_tag(:title, "Estacionamiento de prueba",{:class => "form-control", :readonly => true}) %>
+                	</div>
+                </div>
+                <div class="form-group">
+	                <div class="col-md-2">
+	                   <label class="control-label" for="address">Dirección</label>
+	                </div>
+	                <div class="col-md-10">
+	                	<%= text_field_tag(:address, "Av. Tomás Marsano 756",{:class => "form-control", :readonly => true}) %>
+	                </div>
+	            </div>
+              <div class="form-group">
+                <div class="col-md-2">
+                   <label class="control-label" for="owner">Dueño</label>
+                </div>
+                <div class="col-md-10">
+                  <%= text_field_tag(:owner, "Luis Peralta Epinoza",{:class => "form-control", :readonly => true}) %>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-2">
+                   <label class="control-label" for="price">Precio x Hora (S/.)</label>
+                </div>
+                <div class="col-md-10">
+                  <%= text_field_tag(:price, "50.00",{:class => "form-control", :readonly => true}) %>
+                </div>
+              </div>              
+              <div class="form-group">
+                 <div class="col-md-2">
+                     <label class="control-label"for="rating">Califícame</label>
+                 </div>
+                 <div class="col-md-4">
+                     <select id="example">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                 </div>                
+              </div>  
+              </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="panel panel-primary">
+            <div class="panel-heading">
+               <h3 class="panel-title">Comentarios</h3>
+            </div>
+          <div class="panel-body">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="col-md-10">                   
+                     <%= text_area_tag(:comment, "",{:class => "form-control"}) %>
+                  </div>
+                  <div class="col-md-2" style="text-align: right;">
+                     <button type="button" class="btn btn-primary">Comentar</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="ui comments" data-reactroot="">
+                     <div class="comment">
+                        <div class="content">
+                           <a class="author">Matt</a>
+                           <div class="metadata">
+                              <div>Today at 5:42PM</div>
+                           </div>
+                           <div class="text">How artistic!</div>
+                           <div class="actions"><a class="">Responder</a></div>
+                        </div>
+                     </div>
+                     <div class="comment">                        
+                        <div class="content">
+                           <a class="author">Elliot Fu</a>
+                           <div class="metadata">
+                              <div>Yesterday at 12:30AM</div>
+                           </div>
+                           <div class="text">
+                              <p>This has been very useful for my research. Thanks as well!</p>
+                           </div>
+                           <div class="actions"><a class="">Responder</a></div>
+                        </div>
+                        <div class="ui comments">
+                           <div class="comment">                              
+                              <div class="content">
+                                 <a class="author">Jenny Hess</a>
+                                 <div class="metadata">
+                                    <div>Just now</div>
+                                 </div>
+                                 <div class="text">Elliot you are always so right :)</div>
+                                 <div class="actions"><a class="">Responder</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="comment">                        
+                        <div class="content">
+                           <a class="author">Joe Henderson</a>
+                           <div class="metadata">
+                              <div>5 days ago</div>
+                           </div>
+                           <div class="text">Dude, this is awesome. Thanks so much</div>
+                           <div class="actions"><a class="">Responder</a></div>
+                        </div>
+                     </div>
+                  </div>  
+                  </div>                  
+                </div>  
+              </div>
+            </div>
+        </div>
+      </div>   
+  </div>
+<script type="text/javascript">
+   $(function() {
+      $('#example').barrating({
+        theme: 'fontawesome-stars'
+      });
+   });
+</script>
+<% end %>

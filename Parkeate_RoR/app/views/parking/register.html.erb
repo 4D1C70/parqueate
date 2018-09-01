@@ -1,0 +1,162 @@
+
+<h1></h1>
+
+<%= form_for :mantenimiento, :html => { :class => "form-horizontal" } do |f| %>
+    
+    <div class="jumbotron">
+        <div class="py-5 text-center">
+        	<img class="d-block mx-auto mb-4" src="../../assets/parking2.svg" alt="" width="200" height="150">
+        	<h1>Mantenimiento de Estacionamientos</h1>
+        <p class="lead">En este formulario podrás realizar el mantenimiento de los estacionamientos disponibles.</p>
+    </div>
+    </div>
+<div class="jumbotron">
+       <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-5">
+            <span class="text-muted">UBICACION</span>
+            <span class="badge badge-secondary badge-pill">Lima y Callao</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Mapa del sitio</h6>
+                <div id="maps">
+                <%= render 'map' %> 
+                </div>
+          </ul>
+       </div> 
+            <div class="col-md-8 order-md-2">
+              <h1>
+              <span class="label label-primary">Busqueda</span>
+              </h1>
+            <hr class="mb-4">  
+            <div class="container">
+				<label>Nombre de Estacionamiento</label>
+				<div class="row">
+			        <div class="col-md-9 mb-2">
+			            <form action="" class="search-form">
+			                <div class="form-group has-feedback">
+			            		<label for="search" class="sr-only">Buscar Estacionamiento</label>
+			            		<input type="text" class="form-control" name="search" id="search" placeholder="search">
+			              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+			  				</div>
+			  		</div>
+			  
+			<hr class="mb-4">
+	            <div class="col-sm-20">
+	          <div class="panel panel-primary">
+	            <div class="panel-heading">
+	              <h3 class="panel-title">Estacionamientos</h3>
+	            </div>
+	            <div class="table-responsive">
+	            <table class="table table-wrapped">
+	              <thead>
+	                <tr>
+                  <th>Nombre</th>
+                  <th>Distrito</th>
+                  <th>Tipo</th>
+                  <th>Ubicación</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Estacionamiento 1</td>
+                  <td>San Isidro</td>
+                  <td>Exterior</td>
+                  <td>Primer piso</td>
+                  <td>5 soles</td>
+                </tr>
+                <tr>
+                  <td>Estacionamiento 2</td>
+                  <td>Miraflores</td>
+                  <td>Interior</td>
+                  <td>Segundo piso</td>
+                  <td>3 soles</td>
+                </tr>
+                <tr>
+                  <td>Estacionamiento 3</td>
+                  <td>Miraflores</td>
+                  <td>Interior</td>
+                  <td>Sotano 1</td>
+                  <td>3 soles</td>
+                </tr>
+             </tbody>
+            </table>
+          </div>
+          </div>
+          <nav aria-label="Page navigation">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Anterior</a>
+          </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Siguiente</a>
+            </li>
+            </ul>
+          </nav>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+
+	<div class="jumbotron">
+			       <form>
+				  <div class="form-row">
+				    <div class="form-group col-md-6">
+				      <label for="distrito">Distrito</label>
+		              <%= f.select :distrito, [["Ate",1],["Barranco",2],["Breña",3],["Chorrillos",4],["Jesus María",5],["La Molina",6],["Magdalena del Mar",7],["Pueblo Libre",8],["San Miguel",9],["Surquillo",10]], { :include_blank => "Seleccione un distrito"}, { :class => "form-control"} %>
+		              <small id="distrito" class="form-text text-muted">Obligatorio.</small>
+						    </div>
+				    <div class="form-group col-md-6">
+				      <label for="Tipo de Estacionamiento">Tipo de estacionamiento</label>
+		              <%= f.select :tipoestacionamiento, [["Exterior",1],["Interior",2],["Subterraneo",3]], { :include_blank => "Seleccione un Tipo de Estacionamiento"}, { :class => "form-control"} %>
+		              <small id="tipoestacionamiento" class="form-text text-muted">Opcional</small>
+				    </div>
+				    <div class="form-group col-md-6">
+				      <label for="ubicacion">Ubicación</label>
+		              <%= f.select :ubicacion, [["Primer piso",1],["Segundo Piso",2],["Sotano 1",3],["Sotano 2",4],["Sotano 3",5]], { :include_blank => "Seleccione una Ubicación"}, { :class => "form-control"} %>
+		              <small id="ubicacion" class="form-text text-muted">Opcional</small>
+				  	</div>
+				  <div class="form-row">
+				    <div class="form-group col-md-6">
+				      <label for="direccion">Dirección</label>
+				      <input type="text" class="form-control" id="direccion">
+				      <small id="direccion" class="form-text text-muted">Opcional</small>
+				      </div>
+				  <div class="form-group col-md-6">
+                <label for="precio">Precio por hora</label>
+              <%= f.select :precio, [["5 soles",1],["3 soles",2],["2 soles",3],["1 sol",4]], { :include_blank => "Escoja un precio"}, { :class => "form-control"} %>
+              <small id="precio" class="form-text text-muted">Opcional.</small>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="tiempo">Tiempo </label>
+              <%= f.select :tiempo, [["1 hora",1],["Indefinido",2]], { :include_blank => "Escoja el tiempo"}, { :class => "form-control"} %>
+              <small id="tiempo" class="form-text text-muted">Opcional.</small>
+              </div>
+                
+              <input type="submit" name="commit" value="Guardar" class="btn btn-primary" data-disable-with="Guardar" />
+          <input type="submit" name="commit" value="Cancelar" class="btn btn-primary" data-disable-with="Salir" />
+          </div>
+          </div>
+          </div>
+            <hr class="mb-4">
+            
+             
+        <footer class="my-5 pt-5 text-muted text-left text-small">
+        <p class="mb-1">&copy; 2018 Parkeate</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Portal</a></li>
+          <li class="list-inline-item"><a href="#">Terminos</a></li>
+          <li class="list-inline-item"><a href="#">Soporte</a></li>
+        </ul>
+      </footer>
+      
+    
+<% end %>

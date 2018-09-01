@@ -1,0 +1,96 @@
+
+<%= form_for :additionals, :html => { :class => "form-horizontal" } do |f| %>
+<div class="">
+   <div class="py-5 text-center">
+      <h1>Alquilar Estacionamiento</h1>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="panel panel-primary">
+            <div class="panel-heading">Registrar Alquiler de Estacionamiento</div>
+            <div class="panel-body">
+              <div class="col-md-12">
+<div class="form-group">
+	          <div class="col-sm-offset-1 col-sm-10">
+	          <%= label_tag(:parking, "Estacionamiento: ") %>
+	          <%= text_field_tag(:parking, nil, size: "30x3") %>
+	          </div>
+	        </div>
+
+	        <div class="panel-group">
+	          <div class="panel panel-default">
+	            <div class="panel-heading">Datos del estacionamiento</div>
+	            <div class="panel-body form-horizontal">
+	              <div class="col-sm-offset-1 col-sm-8">
+	               <%= label_tag(:parking, "Estacionamiento: ") %>
+	               <%= text_field_tag(:parking, nil, size: "30x3") %> <br>
+	               <%= label_tag(:parking, "Dirección: ") %>
+	               <%= text_field_tag(:parking, nil, size: "30x3") %> <br>
+	               <%= label_tag(:parking, "Dueño de estacionamiento: ") %>
+	               <%= text_field_tag(:parking, nil, size: "30x3") %><br>
+	               <%= label_tag(:parking, "Precio: ") %>
+	               <%= text_field_tag(:parking, nil, size: "30x3") %> <br><br>
+	              </div>
+	            </div>
+	           </div>
+	         </div>
+
+	         <div class="form-group">
+	           <div class="col-sm-offset-1 col-sm-10">
+	            <%= label_tag(:dateattention, "Fecha y hora inicio: ") %>
+	            <%= datetime_field(:dateattention, :born_on) %>
+	          </div>
+	        </div>
+	       	<div class="form-group">
+	           <div class="col-sm-offset-1 col-sm-10">
+	            <%= label_tag(:dateattention, "Fecha y hora fin: ") %>
+	            <%= datetime_field(:dateattention, :born_on) %>
+	          </div>
+	        </div>
+
+	        <div class ="form-group">
+		          <div class="col-sm-offset-1 col-sm-10">
+		            <%= label_tag(:service_type, "Servicio Adicional: ") %>
+		          </div>
+				<div class="col-sm-offset-3 col-sm-10">
+					<%= label_tag( :service_type, {:class=> "checkbox-inline"}) do %>
+					<%= f.check_box :service_type, {},"ValorSeleccionado", nil %>
+					Lavado de lunas
+					<% end %>
+					<%= f.label :service_type, {:class=> "checkbox-inline"} do %>
+					<%= f.check_box :service_type, {},"ValorSeleccionado", nil %>
+					Revision de llantas
+					<% end %>
+					<%= f.label :service_type, {:class=> "checkbox-inline"} do %>
+					<%= f.check_box :service_type, {},"ValorSeleccionado", nil %>
+					Limpieza de vehiculo
+					<% end %>
+					<%= f.label :service_type, {:class=> "checkbox-inline"} do %>
+					<%= f.check_box :service_type, {},"ValorSeleccionado", nil %>
+					Ninguno
+					<% end %>
+
+				</div>
+			</div>
+
+	        <div class="form-group">
+	          <div class="col-sm-offset-1 col-sm-10">
+	            <%= label_tag(:observations, "Observaciones: ") %><br>
+	            <%= text_area_tag(:observations, nil, size: "100x5") %> <br>
+	          </div>
+	        </div>
+
+	        <div class="form-group">
+	          <div class="col-sm-offset-3 col-sm-10">
+	             <button type="submit" class="btn btn-default">Alquilar</button>
+	             <button type="cancel" class="btn btn-default">Cancelar</button><br><br><br>
+	          </div>
+	        </div>
+                
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+<% end %>
+
