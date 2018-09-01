@@ -1,5 +1,7 @@
 {
   "name": "Parkeate_RoR",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery-bar-rating": "^1.2.2"
+  }
 }

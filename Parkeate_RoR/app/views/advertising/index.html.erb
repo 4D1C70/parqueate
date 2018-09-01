@@ -1,0 +1,104 @@
+<%= form_for :busqPublicidad, :html => { :class => "form-horizontal" } do |f| %>
+<div class="">
+   <div class="py-5 text-center">
+      <h1>Búsqueda de Publicidad</h1>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="panel panel-primary">
+            <div class="panel-heading">Filtros de Búsqueda</div>
+            <div class="panel-body">
+              <div class="col-md-12">
+                <div class="form-group">
+                	<div class="col-md-2">
+	                   <label class="control-label" for="titulo">Título</label>
+                	</div>
+                	<div class="col-md-10">                		
+	                   <%= text_field_tag(:title, "",{:class => "form-control"}) %>
+                	</div>
+                </div>
+                <div class="form-group">
+	                <div class="col-md-2">
+	                   <label class="control-label" for="fecha-inicio">Fecha de Inicio</label>
+	                </div>
+	                <div class="col-md-4">
+	                	<%= date_field_tag(:start_date, nil, {:class => "form-control"}) %>
+	                </div>
+	                <div class="col-md-2">
+	                   <label class="control-label" for="fecha-fin">Fecha de Fin</label>
+	                </div>
+	                <div class="col-md-4">
+	                	<%= date_field_tag(:end_date, nil, {:class => "form-control"}) %>
+	                </div>
+	            </div>                
+                <div class="form-group">
+	                <div class="col-md-2">
+	                   <label class="control-label"for="ubicacion">Ubicación</label>
+	                </div>
+	                <div class="col-md-4">	                	
+	                   <%= f.select :ubicacion, [["Principal",1],["Páginas Dueño",2],["Páginas Cliente",3]], { :include_blank => "Todas"}, { :class => "form-control"} %>
+	                </div>
+	                <div class="col-md-6" style="text-align: right;" >
+                        <button type="button" class="btn btn-success">Nuevo</button>
+                        <button type="button" class="btn btn-primary">Buscar</button>
+	                </div>
+	            </div>
+                
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="panel panel-primary">
+            <div class="panel-heading">
+               <h3 class="panel-title">Resultado de la búsqueda</h3>
+            </div>
+            <div class="table-responsive">
+               <table class="table table-wrapped">
+                  <thead>
+                     <tr>
+                        <th>Titulo</th>
+                        <th>Contenido</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Tarifa</th>
+                        <th>Ubicación</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>Publicidad 1</td>
+                        <td>La mejor ubicación al mejor precio</td>
+                        <td>01/08/2018</td>
+                        <td>15/08/2018</td>
+                        <td>50.00</td>
+                        <td>Principal</td>
+                        <td>Activo</td>
+                        <td><a href="#">Editar</a>&nbsp;&nbsp;<a href="#">Eliminar</a></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+               <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">Anterior</a>
+               </li>
+               <li class="page-item"><a class="page-link" href="#">1</a></li>
+               <li class="page-item"><a class="page-link" href="#">2</a></li>
+               <li class="page-item"><a class="page-link" href="#">3</a></li>
+               <li class="page-item">
+                  <a class="page-link" href="#">Siguiente</a>
+               </li>
+            </ul>
+         </nav>
+         <hr class="mb-4">
+      </div>
+   </div>   
+</div>
+<% end %>

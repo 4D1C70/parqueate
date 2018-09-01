@@ -2,9 +2,6 @@ class ParkingController < ApplicationController
   def list
   end
 
-  def render
-  end
-
   def search
   end
 
@@ -12,5 +9,8 @@ class ParkingController < ApplicationController
   end
 
   def register
+  end
+
+  def comment
   end
 end
